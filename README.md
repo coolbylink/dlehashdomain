@@ -1,2 +1,2 @@
-### DLE Hash Domain 3.0 (13.0)
-[Установка и настройка скрипта:](https://github.com/coolbylink/dlehashdomain/wiki/Установка-и-обновления) `Стабильная версия 3.0.13.0`
+### DLE Hash Domain 3.1 (13.1) for PHP 7.0
+[Установка и настройка скрипта:](https://github.com/coolbylink/dlehashdomain/wiki/Установка-и-обновления) `Стабильная версия 3.0.13.1`
