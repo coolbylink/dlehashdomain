@@ -3,13 +3,13 @@
 	<name>DLE Hash Domain</name>
 	<description>Плагин по активации версий DataLife Engine</description>
 	<icon>engine/skins/images/dhd_icon.png</icon>
-	<version>3.0.13.0</version>
+	<version>3.1.13.1</version>
 	<dleversion>13.0</dleversion>
 	<versioncompare>greater</versioncompare>
 	<mysqlinstall><![CDATA[]]></mysqlinstall>
 	<mysqlupgrade><![CDATA[DELETE FROM `{prefix}_admin_sections` WHERE (name = 'keygen');]]></mysqlupgrade>
 	<mysqlenable><![CDATA[INSERT INTO `{prefix}_admin_sections` (`name`, `title`, `descr`, `icon`, `allow_groups`) VALUES
-('keygen', 'DLE Hash Domain 3.0', 'Настройки DLE Hash Domain', 'dhd_icon.png', 'all');]]></mysqlenable>
+('keygen', 'DLE Hash Domain 3.1', 'Настройки DLE Hash Domain', 'dhd_icon.png', 'all');]]></mysqlenable>
 	<mysqldisable><![CDATA[DELETE FROM `{prefix}_admin_sections` WHERE (name = 'keygen');]]></mysqldisable>
 	<mysqldelete><![CDATA[DELETE FROM `{prefix}_admin_sections` WHERE (name = 'keygen');]]></mysqldelete>
 	<file name="engine/engine.php">
@@ -24,8 +24,8 @@ break;]]></replacecode>
 	</file>
 	<file name="engine/data/dbhash.php">
 		<operation action="before">
-			<searchcode><![CDATA['121' => '2008',]]></searchcode>
-			<replacecode><![CDATA['130' => '6821',]]></replacecode>
+			<searchcode><![CDATA['130' => '6821',]]></searchcode>
+			<replacecode><![CDATA['131' => '7131',]]></replacecode>
 		</operation>
 	</file>
 </dleplugin>

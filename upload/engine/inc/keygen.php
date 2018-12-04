@@ -1,7 +1,7 @@
 <?php
 
 // DataLife Engine Hash Domain
-// Final Release 3.0
+// Final Release 3.1
 // by coollink, kicker
 // This product is distributed free of charge
 
@@ -11,7 +11,7 @@ if( !defined( 'DATALIFEENGINE' ) OR !defined( 'LOGGED_IN' ) ) {
 	die( "Hacking attempt!" );
 }
 
-$version = "3.0"; // версия сборки
+$version = "3.1"; // версия сборки
 
 if( $member_id['user_group'] != 1 ) {
 	msg( "error", $lang['addnews_denied'], $lang['db_denied'] );
@@ -82,7 +82,7 @@ function last($var, $num) {
 					   '083','082','080','075','073',
 					   '072','070');
 					   
-		$version = eregi_replace("([^0-9])", "", $var);
+		$version = preg_replace("([^0-9])", "", $var);
 		if(array_search($version, $array)) { return $version[1].".".$version[2]; } 
 		else { return $version[0].$version[1].".".$version[2]; }
 		
