@@ -2,6 +2,13 @@
 
 $lang_hash = array (
 
+// Hash_mini 0.1.0
+'hash_title'		=>	"Активация DataLife Engine",
+'hash_descr'		=>	"Персональный активатор DataLife Engine",
+'hash_preparation'	=>	"<b>Ваша версия DataLife Engine не активирована.</b><br>На данном этапе <b>DLE Hash Domain</b> попытается активировать вашу копию <b>DataLife Engine v{version}</b>",
+'hash_done'			=>	"Ваша копия успешно активирована плагином DLE Hash Domain<br>Используйте данную активацию исключительно в ознакомительных целях, уважайте разработчиков DataLife Engine.",
+'hash_license'		=>	"Активация",
+
 'keywords'					=>	"DLE, Keygen, Keygen DLE, Кейген, Hash, Hash Domain, DLE Hash Domain, Генерация, Генерация ключа для DLE, Кейген для DLE, Активация DLE, DataLife Engine, Как активировать DLE, DLE Hash Domain by coollin, coollink, by coollink, Бесплатная DLE, Купить DLE, Купить DataLife Engine",
 'hash_module_version'		=>	"Плагин работает с версии: 13.0, и выше.<br>Для более старых версий DLE используйте версию плагина 2.8 и ниже.",
 'hash_module_file'			=>	"Отсутствует файл для работы плагина:",

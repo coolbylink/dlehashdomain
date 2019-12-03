@@ -1,7 +1,7 @@
 <?php
 
 // DataLife Engine Hash Domain
-// Final Release 3.1
+// Final Release 3.2
 // by coollink, kicker
 // This product is distributed free of charge
 
@@ -11,7 +11,7 @@ if( !defined( 'DATALIFEENGINE' ) OR !defined( 'LOGGED_IN' ) ) {
 	die( "Hacking attempt!" );
 }
 
-$version = "3.1"; // версия сборки
+$version = "3.2"; // версия сборки
 
 if( $member_id['user_group'] != 1 ) {
 	msg( "error", $lang['addnews_denied'], $lang['db_denied'] );
@@ -237,8 +237,63 @@ if( $action == "save" ) {
 	msg( "success", $lang['opt_sysok'], $lang['opt_sysok_1'], "?mod=keygen" );
 }
 
+if($action == "license") {
+
+if( $_REQUEST['user_hash'] == "" or $_REQUEST['user_hash'] != $dle_login_hash ) {
+
+    die( "Hacking attempt! User not found" );
+
+}
+
+$config['key'] = md5( get_domen_hash() . DINITVERSION );
+
+$handler = fopen(ENGINE_DIR . '/data/config.php', "w");
+
+fwrite($handler, "<?php 
+
+//System Configurations
+
+\$config = array (
+
+");
+
+foreach($config as $name => $value) {
+    fwrite($handler, "'{$name}' => \"{$value}\",
+");
+}
+fwrite($handler, ");
+?>");
+fclose($handler);
+
+msg( "success", $lang_hash['hash_license'], $lang_hash['hash_done'], "?mod=keygen" );
+}
+
 $mps = v_hash();
 echoheader( "<i class=\"fa fa-globe position-left\"></i><span class=\"text-semibold\">{$lang_hash['adm_title_mini']}</span>", $lang_hash['adm_title']  );
+
+echo <<<HTML
+<div class="alert alert-info alert-styled-left alert-arrow-left alert-component">Актуальная версия скрипта находится на GitHub: <a href="https://github.com/coolbylink/dlehashdomain" target="_blank">https://github.com/coolbylink/dlehashdomain</a><br>Ваша версия: <b>$version</b></b></div>
+HTML;
+
+if(!$config['key']) {
+    $lang_hash['hash_preparation'] = str_replace("{version}", $config['version_id'], $lang_hash['hash_preparation']);
+    echo <<<HTML
+            <form action="?mod=keygen&action=license" name="conf" id="conf" method="post">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        {$lang_hash['hash_title']}
+                    </div>
+                    <div class="panel-body">
+                        {$lang_hash['hash_preparation']}
+                    </div>
+                    <div class="panel-footer">
+                        <input type="hidden" name="user_hash" value="{$dle_login_hash}" />
+                        <button name="btn-new" id="btn-new" type="submit" class="btn bg-teal btn-sm btn-raised"><i class="fa fa-arrow-circle-right position-left"></i>{$lang_hash['hash_license']}</button>
+                    </div>
+                </div>
+            </form>
+HTML;
+}
 
 echo <<<HTML
 <form action="?mod=keygen&action=save" name="conf" id="conf" method="post">
