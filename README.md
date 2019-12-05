@@ -8,4 +8,4 @@
 3. Добавлены новые HASH коды для активации DLE 13.2, 13.3
 ```
 
-![alt text](https://i.ibb.co/6grRdQM/2019-12-04-002511.jpg)
+![alt text](https://i.ibb.co/pJbvmq7/2019-12-04-002511.jpg)
