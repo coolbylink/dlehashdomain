@@ -24,8 +24,8 @@ break;]]></replacecode>
 	</file>
 	<file name="engine/data/dbhash.php">
 		<operation action="before">
-			<searchcode><![CDATA['130' => '6821',]]></searchcode>
-			<replacecode><![CDATA['131' => '7131',]]></replacecode>
+			<searchcode><![CDATA['133' => '1333',]]></searchcode>
+			<replacecode><![CDATA['140' => '1404',]]></replacecode>
 		</operation>
 	</file>
 </dleplugin>
