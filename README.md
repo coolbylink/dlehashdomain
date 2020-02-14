@@ -1,7 +1,7 @@
 ### DLE Hash Domain 2.9
 [Установка и настройка скрипта:](https://github.com/coolbylink/dlehashdomain/wiki/Установка-и-обновления-2.X.X) `Стабильная версия 3.2`
 <br><br>
-> Рекомендуемая версия DataLife Engine: 10.1 до 13.0.<br>
+> Рекомендуемая версия DataLife Engine: 10.1 до 12.1.<br>
 
 #### Последние обновление:
 
