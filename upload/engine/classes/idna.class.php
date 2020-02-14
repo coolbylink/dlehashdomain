@@ -1598,6 +1598,4 @@ class idna_convert
                     )
             );
 }
-
-$idna = new idna_convert();
 ?>
