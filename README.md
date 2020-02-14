@@ -1,5 +1,5 @@
 ### DLE Hash Domain 3.2 (14.0) поддержка PHP 7.3
-[Установка и настройка скрипта:](https://github.com/coolbylink/dlehashdomain/wiki/Установка-и-обновления-3.X.X) `Стабильная версия 3.2.13.3`
+[Установка и настройка скрипта:](https://github.com/coolbylink/dlehashdomain/wiki/Установка-и-обновления-3.X.X) `Стабильная версия 3.2`
 <br><br>
 > Рекомендуемая версия DataLife Engine: 13.x.<br>
 
