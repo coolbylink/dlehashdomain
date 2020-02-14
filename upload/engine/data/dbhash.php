@@ -1,11 +1,11 @@
 <?PHP 
 
 // DataLife Engine Hash Domain
-// Final Release 3.2
+// Final Release 3.0
 // by coollink vs kicker
 // This product is distributed free of charge
 
-$version = '3.2';
+$version = '3.0';
 
 $settings = array (
 
@@ -15,7 +15,9 @@ $settings = array (
 
 'select_br' => '1',
 
-'select_actual' => '133',
+'select_optgroup' => '1',
+
+'select_actual' => '120',
 
 'download' => '1',
 
