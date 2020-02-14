@@ -1,11 +1,11 @@
 <?PHP 
 
 // DataLife Engine Hash Domain
-// Final Release 3.2
+// Final Release 3.1
 // by coollink vs kicker
 // This product is distributed free of charge
 
-$version = '3.2';
+$version = '3.1';
 
 $settings = array (
 
@@ -15,7 +15,9 @@ $settings = array (
 
 'select_br' => '1',
 
-'select_actual' => '133',
+'select_optgroup' => '1',
+
+'select_actual' => '120',
 
 'download' => '1',
 
@@ -26,12 +28,6 @@ $settings = array (
 //База hash ключей
 
 $dbhash = array(
-
-'140' => '1404',
-
-'133' => '1333',
-
-'132' => '7232',
 
 '131' => '7131',
 

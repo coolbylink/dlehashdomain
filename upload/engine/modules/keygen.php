@@ -1,7 +1,7 @@
 <?PHP
 
 // DataLife Engine Hash Domain
-// Final Release 3.2
+// Final Release 3.1
 // by coollink, kicker
 // This product is distributed free of charge
 
@@ -112,7 +112,7 @@ function last_micro() {
 	return $version[0];	
 }
 
-function search($dest = null, $sort = null) {
+function search($dest, $sort) {
 	global $dbhash;
 	$i = 1;
 	if($sort == false) {
@@ -134,29 +134,29 @@ function search($dest = null, $sort = null) {
 }
 
 
-function last($var = null, $num = null) {
+function last($var, $num) {
 	
 	global $dbhash;
-
+	
 	if(!$num == true) {
-
+		
 		$version = array_keys($dbhash);
 		$version = preg_replace("([^0-9])", "", $version[0]);
 		return $version[0].$version[1].".".$version[2];
-
+		
 	} else {
-
+		
 		$array = array('100','098','097','096','095',
 					   '094','093','092','090','085',
 					   '083','082','080','075','073',
 					   '072','070');
-
+					   
 		$version = preg_replace("([^0-9])", "", $var);
-		if(array_search($version, $array)) { return $version[1].".".$version[2]; }
+		if(array_search($version, $array)) { return $version[1].".".$version[2]; } 
 		else { return $version[0].$version[1].".".$version[2]; }
-
+		
 	}
-
+	
 }
 
 function select_hash($check) {
@@ -245,7 +245,6 @@ $tpl->set('{description}', $settings['home_title']);
 $tpl->set('{version}', $version);
 $tpl->set('{last_version_hash}', last());
 
-
 $tpl->set('{example}', punycode_decode($_SERVER['HTTP_HOST']));
 
 $tpl->set('{select_hash}', select_hash($_SESSION['hash_version']));
@@ -270,7 +269,7 @@ $tmp2 = '\$config = array';
 $body = "<?PHP
 
 // DataLife Engine Hash Domain (MINI)
-// Final Release 3.2
+// Final Release 3.1
 // by coollink, kicker
 // This product is distributed free of charge
 
